@@ -16,7 +16,7 @@ header {
     column-count:4;
     column-gap:20px;
     column-rule:4px double black;
-    line-style:none;
+    list-style: doted;
      
     -webkit-column-count:4;
     -webkit-column-gap:20px;
