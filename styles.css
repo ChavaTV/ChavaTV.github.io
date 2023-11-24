@@ -1,7 +1,9 @@
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
+    /* Especifica el degradado lineal */
+    /*background: linear-gradient(to bottom, #94D0C2, #3ec4ca);*/
     padding: 0;
+    margin: 0;
+    color: #000000;
 }
 
 header {
