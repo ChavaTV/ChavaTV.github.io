@@ -12,6 +12,12 @@ header {
     padding: 2em 0;
 }
 
+#columnas{
+    column-count:4;
+    column-gap:20px;
+    column-rule:4px dotted gray;
+ }
+
 .about,
 .skills,
 .projects {
