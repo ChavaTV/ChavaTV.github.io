@@ -1,5 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&family=Work+Sans:wght@100;300;400;600;800&display=swap');
 
+.galeria {
+    display: flex;
+    overflow-x: auto; /* Permite el desplazamiento horizontal */
+    white-space: nowrap; /* Evita que los elementos se dividan en varias líneas */
+  }
+
+  .imagen {
+    flex: 0 0 auto; /* No se expandirá ni se contraerá */
+    margin-right: 10px; /* Espaciado entre las imágenes */
+  }
+
 body {
     /* Especifica el degradado lineal */
     /*background: linear-gradient(to bottom, #94D0C2, #3ec4ca);*/
