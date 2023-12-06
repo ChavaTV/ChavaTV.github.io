@@ -1,72 +1,550 @@
-body {
-    /* Especifica el degradado lineal */
-    /*background: linear-gradient(to bottom, #94D0C2, #3ec4ca);*/
-    padding: 0;
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Work+Sans:wght@100;300;400;600;800&display=swap');
+
+*{
+    box-sizing: border-box;
+    font-family: 'Work Sans';
     margin: 0;
-    color: #000000;
-}
-
-header {
-    background-color: #94D0C2;
-
-    color: #000000;
-    text-align: center;
-    padding: 2em 0;
-}
-
-.center{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#columnas{
-    column-count:4;
-    column-gap:20px;
-    column-rule:4px double black;
-    list-style: groove;
-     
-    -webkit-column-count:4;
-    -webkit-column-gap:20px;
-    -webkit-column-rule:4px double black;
- 
-    -moz-column-count:4;
-    -moz-column-gap:20px;
-    -moz-column-rule:4px double black;
- 
-    -o-column-count:4;
-    -o-column-gap:20px;
-    -o-column-rule:4px double black;
- 
-    -ms-column-count:4;
-    -ms-column-gap:20px;
-    -ms-column-rule:4px double black;
- }
-
-.about,
-.skills,
-.software,
-.projects {
-    margin: 2em;
-}
-
-ul {
-    list-style: none;
     padding: 0;
 }
 
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1em 0;
+html{
+    /*Permite deslizar cuando hago click en los links del menu*/
+    scroll-behavior: smooth;
 }
 
-a {
-    color: #3498db;
+/* ESTO ES UNA PRUEBA PARA LA FOTO CIRCULAR*/
+.imagen-circular {
+    border-radius: 50%;
+    width: 100px; /* ajusta el ancho según sea necesario */
+    height: 100px; /* ajusta la altura según sea necesario */
+    overflow: hidden; /* asegura que la imagen respete el radio del borde */
+}
+
+/* Este es solo un ejemplo de estilo, puedes ajustar según tus necesidades */
+.imagen-circular img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* asegura que la imagen cubra el círculo sin deformarse */
+} /*termina la pruea de la foto circular*/
+
+
+/*menu*/
+.container-header{
+    background: #1e2326;
+    position: sticky;
+    /*sticky*/
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+
+.container-header header{
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.container-header header .logo a{
+    font-family: 'Righteous';
+    font-size: 36px;
+    color: #1cb698;
     text-decoration: none;
 }
 
-a:hover {
-    text-decoration: underline;
+.container-header header ul{
+    display: flex;
+    list-style: none;
 }
+
+.container-header header nav ul li a{
+    text-align: none;
+    color: #fff;
+    margin: 0 15px;
+    padding: 3px;
+    transition: .5s;
+    text-decoration: none;
+}
+
+.container-header header nav ul li a:hover{
+    color: #1cb698;
+}
+
+.nav-responsive{
+    background-color: #1cb698;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+/* SECCION INICIO*/
+.inicio{
+    background: linear-gradient(to top, rgba(30,35,38,.8), rgba(30,35,38,1)),
+    url(img/fondo01.jpg);
+    background-size: cover;
+    height: 100vh;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.inicio .contenido-banner{
+    padding: 20px;
+    background-color: #1e2326;
+    max-width: 350px;
+    margin: auto;
+    text-align: center;
+    border-radius: 40px;
+}
+
+.inicio .contenido-banner{
+    margin-top: 40px;
+    border: 10px solid #1cb698;
+    display: block;
+    width: 80%;
+    margin: auto;
+    /*border-radius: 100%;   solo si la foto es circular*/
+}
+
+.inicio .contenido-banner h1{
+    margin-top: 40px;
+    font-size: 40px;
+    font-family: 'Righteous';
+}
+
+.inicio .contenido-banner h2{
+    font-size: 15px;
+    font-weight: normal;
+}
+
+.inicio .contenido-banner .redes a{
+    color: #ffff;
+    display: inline-block;/**/
+    text-decoration: none;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    margin: 40px 5 px;
+    font-size: 20px;
+    transition: .3s;
+}
+
+.inicio .contenido-banner .redes a:hover{
+    background-color: #1cb698;
+}
+
+/* SECCION SOBRE MI*/
+
+.sobremi{
+    background-color: #1e2326;
+    color: #fff;
+    padding: 50px 20px;
+}
+
+.sobremi .contenido-seccion{
+    max-width: 1100px;
+    margin: auto;
+}
+.sobremi h2{
+    font-size: 48px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20px 0;
+}
+
+.sobremi .contenido-seccion p{
+    font: 18px;
+    line-height: 22px;
+    margin-bottom: 20px;
+}
+
+.sobremi .contenido-seccion p span{
+    color: #1cb698;
+    font-weight: bold;
+}
+
+.sobremi .fila{
+    display: flex;
+}
+
+.sobremi .fila .col{
+    width: 50%;
+}
+
+.sobremi .fila .col h3{
+    font-size: 28px;
+    font-family: 'Righteous';
+    margin-bottom: 25px;
+}
+
+.sobremi .fila .col ul{
+    list-style: none;
+}
+
+.sobremi .fila .col ul li{
+    margin: 12px 0;
+}
+
+.sobremi .fila .col ul li strong{
+    display: inline-block;
+    color: #1cb698;
+    width: 130px;
+}
+
+.sobremi .fila .col ul li span{
+    background-color: #1cb698;
+    color: black;
+    padding: 3px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.sobremi .fila .col .contenedor-intereses{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sobremi .fila .col .contenedor-intereses .interes{
+    width: 120px;
+    height: 120px;
+    background-color: #252a2e;
+    border-radius: 10px;
+    margin: 0 15px 15px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+}
+
+.sobremi .fila .col .contenedor-intereses .interes:hover{
+    background-color: #1cb698;
+}
+
+.sobremi .fila .col .contenedor-intereses .interes i{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.sobremi button{
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid #fff;
+    width: fit-content;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 22px;
+    font-size: 16px;
+    color: #fff;
+    position: relative;
+    z-index: 10;
+}
+
+.sobremi button .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #1cb698;
+    z-index: -1;
+    transition: 1s;
+}
+
+.sobremi button:hover .overlay{
+    width: 100%;
+}
+
+/*seccion SKILLS*/
+.skills{
+    background-color: #252a2e;
+    color: #fff;
+    padding: 50px 20px;
+}
+
+.skills .contenido-seccion{
+    max-width: 1100px;
+    margin: auto;
+}
+.skills h2{
+    font-size: 48px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20px 0;
+}
+
+.skills .fila{
+    display: flex;
+}
+
+.skills .fila .col{
+    width: 50%;
+    padding: 0 20px;
+}
+
+.skills .fila .col h3{
+    font-size: 28px;
+    font-family: 'Righteous';
+    margin-bottom: 25px;
+}
+
+.skills .skill > span{
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.skills .skill .barra-skill{
+    height: 8px;
+    width: 80%;
+    background-color: #131517;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.skills .skill .progreso{
+    background-color: #1cb698;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 8px;
+}
+
+.skills .skill .barra-skill span{
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    background-color: #1cb698;
+    border-radius: 50px;
+    line-height: 40px;
+    text-align: center;
+    top: -17px;
+    right: -15px;
+    font-size: 14px;
+}
+
+.skills .skill .javascript{
+    width: 0%;
+    animation: 2s javascript forwards;
+}
+
+@keyframes javascript{
+    0%{width: 0%;}
+    100%{width: 75%;}
+}
+
+.skills .skill .htmlcss{
+    width: 0%;
+    animation: 2s htmlcss forwards;
+}
+
+@keyframes htmlcss{
+    0%{width: 0%;}
+    100%{width: 89%;}
+}
+
+.skills .skill .python{
+    width: 0%;
+    animation: 2s python forwards;
+}
+
+@keyframes python{
+    0%{width: 0%;}
+    100%{width: 89%;}
+}
+
+.skills .skill .react{
+    width: 0%;
+    animation: 2s react forwards;
+}
+
+@keyframes react{
+    0%{width: 0%;}
+    100%{width: 65%;}
+}
+
+.skills .skill .php{
+    width: 0%;
+    animation: 2s php forwards;
+}
+
+@keyframes php{
+    0%{width: 0%;}
+    100%{width: 70%;}
+}
+
+.skills .skill .sql{
+    width: 0%;
+    animation: 2s sql forwards;
+}
+
+@keyframes sql{
+    0%{width: 0%;}
+    100%{width: 70%;}
+}
+
+.skills .skill .firebase{
+    width: 0%;
+    animation: 2s firebase forwards;
+}
+
+@keyframes firebase{
+    0%{width: 0%;}
+    100%{width: 65%;}
+}
+
+.skills .skill .git_github{
+    width: 0%;
+    animation: 2s git_github forwards;
+}
+
+@keyframes git_github{
+    0%{width: 0%;}
+    100%{width: 89%;}
+}
+
+.skills .skill .comunicacion{
+    width: 0%;
+    animation: 2s comunicacion forwards;
+}
+
+@keyframes comunicacion{
+    0%{width: 0%;}
+    100%{width: 90%;}
+}
+
+.skills .skill .t_equipo{
+    width: 0%;
+    animation: 2s t_equipo forwards;
+}
+
+@keyframes t_equipo{
+    0%{width: 0%;}
+    100%{width: 89%;}
+}
+
+.skills .skill .creatividad{
+    width: 0%;
+    animation: 2s creatividad forwards;
+}
+
+@keyframes creatividad{
+    0%{width: 0%;}
+    100%{width: 89%;}
+}
+
+.skills .skill .dedicacion{
+    width: 0%;
+    animation: 2s dedicacion forwards;
+}
+
+@keyframes dedicacion{
+    0%{width: 0%;}
+    100%{width: 90%;}
+}
+
+.skills .skill .problemas{
+    width: 0%;
+    animation: 2s problemas forwards;
+}
+
+@keyframes problemas{
+    0%{width: 0%;}
+    100%{width: 90%;}
+}
+.skills .skill .ingles{
+    width: 0%;
+    animation: 2s ingles forwards;
+}
+
+@keyframes ingles{
+    0%{width: 0%;}
+    100%{width: 55%;}
+}
+
+/*FOOTER*/
+footer{
+    background-color: #1e2326;
+    color: #fff;
+    padding: 50px 0 30px 0;
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+footer .redes{
+    margin-bottom: 20px;
+}
+footer .redes a{
+    color: #fff;
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    margin: 40px 5px;
+    font-size: 20px;
+    transition: .3s;
+}
+footer .arriba{
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: #1CB698;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -25px;
+    border-radius: 50%;
+    line-height: 50px;
+    font-size: 18px;
+}
+
+
+/*PRUEBA DE CARRUSEL*/
+/*
+.skills{
+    background-color: #1e2326;
+    color: #f0f0f0;
+    padding: 50px 20px;
+}
+
+.skills h3{
+    font-size: 48px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20 px 0;
+}*/
+/*
+.skills .icon-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* ajusta la cantidad de columnas según sea necesario */
+   /* gap: 20px; /* ajusta el espacio entre los íconos según sea necesario */
+  /*}
+  
+  .icon-item {
+    background-color: #252a2e;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .icon-item i {
+    font-size: 2em;
+    color: #fff; /* ajusta el color según sea necesario */
+  /*}
+ /* fin prueba de carrusel*/ 
+
+
+
+  
