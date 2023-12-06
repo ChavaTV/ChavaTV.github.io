@@ -12,22 +12,6 @@ html{
     scroll-behavior: smooth;
 }
 
-/* ESTO ES UNA PRUEBA PARA LA FOTO CIRCULAR*/
-.imagen-circular {
-    border-radius: 50%;
-    width: 100px; /* ajusta el ancho según sea necesario */
-    height: 100px; /* ajusta la altura según sea necesario */
-    overflow: hidden; /* asegura que la imagen respete el radio del borde */
-}
-
-/* Este es solo un ejemplo de estilo, puedes ajustar según tus necesidades */
-.imagen-circular img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* asegura que la imagen cubra el círculo sin deformarse */
-} /*termina la pruea de la foto circular*/
-
-
 /*menu*/
 .container-header{
     background: #1e2326;
@@ -509,42 +493,3 @@ footer .arriba{
     font-size: 18px;
 }
 
-
-/*PRUEBA DE CARRUSEL*/
-/*
-.skills{
-    background-color: #1e2326;
-    color: #f0f0f0;
-    padding: 50px 20px;
-}
-
-.skills h3{
-    font-size: 48px;
-    font-family: 'Righteous';
-    text-align: center;
-    padding: 20 px 0;
-}*/
-/*
-.skills .icon-gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* ajusta la cantidad de columnas según sea necesario */
-   /* gap: 20px; /* ajusta el espacio entre los íconos según sea necesario */
-  /*}
-  
-  .icon-item {
-    background-color: #252a2e;
-    padding: 20px;
-    text-align: center;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .icon-item i {
-    font-size: 2em;
-    color: #fff; /* ajusta el color según sea necesario */
-  /*}
- /* fin prueba de carrusel*/ 
-
-
-
-  
