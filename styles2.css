@@ -1,156 +1,44 @@
-@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Work+Sans:wght@100;300;400;600;800&display=swap');
-
-.galeria {
-    display: flex;
-    overflow-x: auto; /* Permite el desplazamiento horizontal */
-    white-space: nowrap; /* Evita que los elementos se dividan en varias líneas */
-  }
-
-  .imagen {
-    flex: 0 0 auto; /* No se expandirá ni se contraerá */
-    margin-right: 10px; /* Espaciado entre las imágenes */
-  }
-
-body {
-    /* Especifica el degradado lineal */
-    /*background: linear-gradient(to bottom, #94D0C2, #3ec4ca);*/
-    padding: 0;
-    margin: 0;
-    color: #000000;
-}
-
-header {
-    background-color: #94D0C2;
-    color: #000000;
-    text-align: center;
-    padding: 2em 0;
-}
-
-.container{
-    font-family: 'Righteous';
-}
-
-.center{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#columnas{
-    column-count:4;
-    column-gap:20px;
-    column-rule:4px double black;
-    list-style: groove;
-     
-    -webkit-column-count:4;
-    -webkit-column-gap:20px;
-    -webkit-column-rule:4px double black;
- 
-    -moz-column-count:4;
-    -moz-column-gap:20px;
-    -moz-column-rule:4px double black;
- 
-    -o-column-count:4;
-    -o-column-gap:20px;
-    -o-column-rule:4px double black;
- 
-    -ms-column-count:4;
-    -ms-column-gap:20px;
-    -ms-column-rule:4px double black;
- }
-
-.about,
-.skills,
-.software,
-.projects {
-    margin: 2em;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-footer {
-    background-color: #333;
+.proyectos{
+    background-color: #1e2326;
     color: #fff;
-    text-align: center;
-    padding: 1em 0;
+    padding: 50px 20px;
 }
-
-a {
-    color: #3498db;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-
-
-/* personalizacion*/
-*{
-    box-sizing: border-box;
-    font-family: 'Work Sans';
-    margin: 0;
-    padding: 0;
-}
-
-html{
-    /*Permite deslizar cuando hago click en los links del menu*/
-    scroll-behavior: smooth;
-}
-
-/*menu*/
-.container-header{
-    background: #1e2326;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 99;
-}
-
-.container-header header{
+.proyectos .contenido-seccion{
     max-width: 1100px;
     margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 20px;
+    text-align: center;
 }
 
-.container-header header .logo a{
-    font-family: 'Righteous';
-    font-size: 36px;
-    color: black;
-    text-decoration: none;
-}
-
-.container-header header ul{
-    display: flex;
-    list-style: none;
-}
-
-.container-header header nav ul li a{
-    text-align: none;
-    color: #fff;
-    margin: 0 15px;
-    padding: 3px;
-    transition: .5s;
-    text-decoration: none;
-}
-
-.container-header header nav ul li a:hover{
-    color: #000000;
-}
-
-.nav-responsive{
+.proyectos .contenido-seccion a:hover{
     background-color: #1cb698;
-    color: #fff;
-    padding: 5px 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    display: none;
+    transition: .5s;
+    color: black;
 }
+
+.proyectos .contenido-seccion .fotos{
+    height: 200px;
+    width: 200px;
+    margin: auto;
+    display: block;
+}
+
+.proyectos .contenido-seccion .foto2{
+    height: 200px;
+    width: 170px;
+    margin: auto;
+    display: block;
+}
+
+.card{
+    background-color: #252a2e;
+    color: #fff;
+    padding: 50px 20px;
+    line-height: 22px;
+    margin-bottom: 30px;
+}
+
+.card .card-body{
+    max-width: 1100px;
+    margin: auto;
+}
+
