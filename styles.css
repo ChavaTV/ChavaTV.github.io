@@ -12,6 +12,22 @@ html{
     scroll-behavior: smooth;
 }
 
+/* ESTO ES UNA PRUEBA PARA LA FOTO CIRCULAR*/
+.imagen-circular {
+    border-radius: 50%;
+    width: 100px; /* ajusta el ancho según sea necesario */
+    height: 100px; /* ajusta la altura según sea necesario */
+    overflow: hidden; /* asegura que la imagen respete el radio del borde */
+}
+
+/* Este es solo un ejemplo de estilo, puedes ajustar según tus necesidades */
+.imagen-circular img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* asegura que la imagen cubra el círculo sin deformarse */
+} /*termina la pruea de la foto circular*/
+
+
 /*menu*/
 .container-header{
     background: #1e2326;
@@ -69,7 +85,7 @@ html{
 /* SECCION INICIO*/
 .inicio{
     background: linear-gradient(to top, rgba(30,35,38,.8), rgba(30,35,38,1)),
-    url(fondo01.jpg);
+    url(img/fondo01.jpg);
     background-size: cover;
     height: 100vh;
     color: #fff;
@@ -453,6 +469,60 @@ html{
     100%{width: 55%;}
 }
 
+/*PROYECTOS*/
+.proyectos{
+    background-color: #1e2326;
+    color: #fff;
+    padding: 50px 20px;
+}
+.proyectos .contenido-seccion{
+    max-width: 1100px;
+    margin: auto;
+    text-align: center;
+}
+
+.proyectos h2{
+    font-size: 48px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20px 0;
+}
+
+.proyectos .contenido-seccion a:hover{
+    background-color: #1cb698;
+    transition: .5s;
+    color: black;
+}
+
+.proyectos .contenido-seccion .fotos{
+    height: 200px;
+    width: 200px;
+    margin: auto;
+    display: block;
+}
+
+.proyectos .contenido-seccion .foto2{
+    height: 200px;
+    width: 170px;
+    margin: auto;
+    display: block;
+}
+
+.card{
+    background-color: #252a2e;
+    color: #fff;
+    padding: 50px 20px;
+    line-height: 22px;
+    margin-bottom: 30px;
+}
+
+.card .card-body{
+    max-width: 1100px;
+    margin: auto;
+}
+
+
+
 /*FOOTER*/
 footer{
     background-color: #1e2326;
@@ -493,3 +563,82 @@ footer .arriba{
     font-size: 18px;
 }
 
+/* SECCION RESPONSIVE */
+@media screen and (max-width:980px){
+    nav{
+        display: none;
+    }
+    .nav-responsive{
+        display: block;
+    }
+    nav.responsive{
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 75px;
+        background-color: #252A2E;
+        width: 180px;
+    }
+    nav.responsive ul{
+        display: block !important;
+    }
+    nav.responsive ul li{
+        border-bottom: 1px solid #fff;
+        padding: 10px 0;
+    }
+}
+@media screen and (max-width:700px){
+    .sobremi .fila{
+        display: block;
+    }
+    .sobremi .fila .col{
+        width: fit-content;
+    }
+
+    .skills .fila{
+        display: block;
+    }
+    .skills .fila .col{
+        width: 100%;
+    }
+    .skills .fila .col .barra-skill{
+        width: 100%;
+    }
+
+}
+
+
+/*PRUEBA DE CARRUSEL*/
+/*
+.skills{
+    background-color: #1e2326;
+    color: #f0f0f0;
+    padding: 50px 20px;
+}
+
+.skills h3{
+    font-size: 48px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20 px 0;
+}*/
+/*
+.skills .icon-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* ajusta la cantidad de columnas según sea necesario */
+   /* gap: 20px; /* ajusta el espacio entre los íconos según sea necesario */
+  /*}
+  
+  .icon-item {
+    background-color: #252a2e;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .icon-item i {
+    font-size: 2em;
+    color: #fff; /* ajusta el color según sea necesario */
+  /*}
+ /* fin prueba de carrusel*/ 
