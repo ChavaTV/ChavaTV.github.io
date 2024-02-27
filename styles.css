@@ -14,17 +14,22 @@ html{
 
 /* ESTO ES UNA PRUEBA PARA LA FOTO CIRCULAR*/
 .imagen-circular {
-    border-radius: 50%;
-    width: 100px; /* ajusta el ancho según sea necesario */
-    height: 100px; /* ajusta la altura según sea necesario */
-    overflow: hidden; /* asegura que la imagen respete el radio del borde */
+    padding: 20px;
+    background-color: #1e2326;
+    max-width: 350px;
+    margin: auto;
+    text-align: center;
+    border-radius: 40px;
 }
 
 /* Este es solo un ejemplo de estilo, puedes ajustar según tus necesidades */
 .imagen-circular img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* asegura que la imagen cubra el círculo sin deformarse */
+    margin-top: 40px;
+    border: 5px solid #1CB698;
+    display: block;
+    width: 80%;
+    margin: auto;
+    border-radius: 100%;
 } /*termina la pruea de la foto circular*/
 
 
@@ -280,252 +285,196 @@ html{
     padding: 20px 0;
 }
 
-.skills .fila{
+.slider {
+    background-color: #252a2e;
+    width: 75vw;
+    height: 100px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slider .slide-track {
     display: flex;
+    animation: scroll 40s linear infinite;
+    -webkit-animation: scroll 40s linear infinite; 
+    width: calc(100px * 16);
 }
 
-.skills .fila .col{
-    width: 50%;
-    padding: 0 20px;
+.slider .slide {
+    width: 100px;
+    margin-right: 20px; /* Espacio entre las imágenes */
 }
 
-.skills .fila .col h3{
-    font-size: 28px;
-    font-family: 'Righteous';
-    margin-bottom: 25px;
+.slider .slide img {
+    max-width: 100px; /* Tamaño máximo de la imagen */
+    height: auto; /* Mantiene la proporción original */
 }
 
-.skills .skill > span{
-    font-weight: bold;
-    display: block;
-    margin-bottom: 10px;
+@keyframes scroll {
+    0%{
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    100%{
+        -webkit-transform: translateX(calc(-100px * 8));
+        transform: translateX(-100px * 8);
+    }
+    
 }
 
-.skills .skill .barra-skill{
-    height: 8px;
-    width: 80%;
-    background-color: #131517;
-    position: relative;
-    margin-bottom: 30px;
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Columnas de tamaño variable */
+    gap: 10px; /* Espacio entre las columnas */
+    padding: 10px; /* Padding para separar del borde del contenedor */
 }
 
-.skills .skill .progreso{
-    background-color: #1cb698;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 8px;
+ul {
+    color: #1cb698;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
-.skills .skill .barra-skill span{
-    position: absolute;
-    height: 40px;
-    width: 40px;
-    background-color: #1cb698;
-    border-radius: 50px;
-    line-height: 40px;
-    text-align: center;
-    top: -17px;
-    right: -15px;
-    font-size: 14px;
-}
-
-.skills .skill .javascript{
-    width: 0%;
-    animation: 2s javascript forwards;
-}
-
-@keyframes javascript{
-    0%{width: 0%;}
-    100%{width: 75%;}
-}
-
-.skills .skill .htmlcss{
-    width: 0%;
-    animation: 2s htmlcss forwards;
-}
-
-@keyframes htmlcss{
-    0%{width: 0%;}
-    100%{width: 89%;}
-}
-
-.skills .skill .python{
-    width: 0%;
-    animation: 2s python forwards;
-}
-
-@keyframes python{
-    0%{width: 0%;}
-    100%{width: 89%;}
-}
-
-.skills .skill .react{
-    width: 0%;
-    animation: 2s react forwards;
-}
-
-@keyframes react{
-    0%{width: 0%;}
-    100%{width: 65%;}
-}
-
-.skills .skill .php{
-    width: 0%;
-    animation: 2s php forwards;
-}
-
-@keyframes php{
-    0%{width: 0%;}
-    100%{width: 70%;}
-}
-
-.skills .skill .sql{
-    width: 0%;
-    animation: 2s sql forwards;
-}
-
-@keyframes sql{
-    0%{width: 0%;}
-    100%{width: 70%;}
-}
-
-.skills .skill .firebase{
-    width: 0%;
-    animation: 2s firebase forwards;
-}
-
-@keyframes firebase{
-    0%{width: 0%;}
-    100%{width: 65%;}
-}
-
-.skills .skill .git_github{
-    width: 0%;
-    animation: 2s git_github forwards;
-}
-
-@keyframes git_github{
-    0%{width: 0%;}
-    100%{width: 89%;}
-}
-
-.skills .skill .comunicacion{
-    width: 0%;
-    animation: 2s comunicacion forwards;
-}
-
-@keyframes comunicacion{
-    0%{width: 0%;}
-    100%{width: 90%;}
-}
-
-.skills .skill .t_equipo{
-    width: 0%;
-    animation: 2s t_equipo forwards;
-}
-
-@keyframes t_equipo{
-    0%{width: 0%;}
-    100%{width: 89%;}
-}
-
-.skills .skill .creatividad{
-    width: 0%;
-    animation: 2s creatividad forwards;
-}
-
-@keyframes creatividad{
-    0%{width: 0%;}
-    100%{width: 89%;}
-}
-
-.skills .skill .dedicacion{
-    width: 0%;
-    animation: 2s dedicacion forwards;
-}
-
-@keyframes dedicacion{
-    0%{width: 0%;}
-    100%{width: 90%;}
-}
-
-.skills .skill .problemas{
-    width: 0%;
-    animation: 2s problemas forwards;
-}
-
-@keyframes problemas{
-    0%{width: 0%;}
-    100%{width: 90%;}
-}
-.skills .skill .ingles{
-    width: 0%;
-    animation: 2s ingles forwards;
-}
-
-@keyframes ingles{
-    0%{width: 0%;}
-    100%{width: 55%;}
+li {
+    padding: 5px;
 }
 
 /*PROYECTOS*/
-.proyectos{
+.proyectos {
     background-color: #1e2326;
     color: #fff;
-    padding: 50px 20px;
+    padding: 5% 2%; /* Utilizando porcentajes para el padding */
 }
-.proyectos .contenido-seccion{
+
+.proyectos .contenido-seccion {
     max-width: 1100px;
     margin: auto;
     text-align: center;
 }
 
-.proyectos h2{
+.proyectos h2 {
+    font-size: 3rem; /* Utilizando unidades rem para el tamaño de fuente */
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 1rem 0; /* Utilizando rem para el padding */
+}
+
+.proyectos .contenido-seccion a:hover {
+    background-color: #1cb698;
+    transition: .5s;
+    color: black;
+}
+
+.proyectos .contenido-seccion .fotos {
+    max-width: 200px; /* Utilizando max-width para limitar el tamaño */
+    height: auto; /* Para mantener la proporción de la imagen */
+    margin: auto;
+    display: block;
+}
+
+.proyectos .contenido-seccion .foto2 {
+    max-width: 170px; /* Utilizando max-width para limitar el tamaño */
+    height: auto; /* Para mantener la proporción de la imagen */
+    margin: auto;
+    display: block;
+}
+
+.proyectos .contenido-seccion .foto3{
+    max-width: 400px; /* Aumenta el ancho máximo */
+    max-height: 300px; /* Aumenta la altura máxima */
+    width: 100%; /* Para asegurar que la imagen ocupe el máximo de su contenedor */
+    height: auto; /* Para mantener la proporción de la imagen */
+    margin: auto;
+    display: block;
+}
+
+
+.card {
+    background-color: #252a2e;
+    color: #fff;
+    padding: 5% 2%; /* Utilizando porcentajes para el padding */
+    line-height: 1.5; /* Ajustando la altura de línea */
+    margin-bottom: 30px;
+}
+
+.card .card-body {
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* Portfolio 
+.portfolio{
+    background-color: #252A2E;
+    color: #fff;
+    padding: 50px 20px;
+}
+
+.portfolio .contenido-seccion{
+    max-width: 1100px;
+    margin: auto;
+}
+
+.portfolio h2{
     font-size: 48px;
     font-family: 'Righteous';
     text-align: center;
     padding: 20px 0;
 }
 
-.proyectos .contenido-seccion a:hover{
-    background-color: #1cb698;
-    transition: .5s;
-    color: black;
+.portfolio .galeria{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
-.proyectos .contenido-seccion .fotos{
-    height: 200px;
-    width: 200px;
-    margin: auto;
+.portfolio .galeria .proyectos{
+    position: relative;
+    max-width: 340px;
+    height: fit-content;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.portfolio .galeria .proyecto img{
+    width: 100%;
     display: block;
 }
 
-.proyectos .contenido-seccion .foto2{
-    height: 200px;
-    width: 170px;
-    margin: auto;
-    display: block;
+.portfolio .galeria .proyecto .overlay{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: linear-gradient(rgba(28,182,152,.8),rgba(28,182,152,.8));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 1s;
+    font-size: 18px;
+    letter-spacing: 3px;
+    opacity: 0;
 }
 
-.card{
-    background-color: #252a2e;
-    color: #fff;
-    padding: 50px 20px;
-    line-height: 22px;
-    margin-bottom: 30px;
+.portfolio .galeria .proyecto .overlay h3{
+    margin-bottom: 20px;
+    transition: 1s;
 }
 
-.card .card-body{
-    max-width: 1100px;
-    margin: auto;
+.portfolio .galeria .proyecto .overlay:hover{
+    opacity: 1;
 }
+
+.portfolio .galeria .proyecto .overlay:hover h3{
+    margin-bottom: 0px;
+}*/
 
 
 
 /*FOOTER*/
 footer{
-    background-color: #1e2326;
+    background-color: #252a2e;
     color: #fff;
     padding: 50px 0 30px 0;
     text-align: center;
@@ -595,50 +544,20 @@ footer .arriba{
         width: fit-content;
     }
 
-    .skills .fila{
-        display: block;
+    .grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Menos columnas en pantallas pequeñas */
     }
-    .skills .fila .col{
-        width: 100%;
+
+    /* Media queries para hacer el diseño responsive */
+    .proyectos h2 {
+        font-size: 2.5rem; /* Disminuir tamaño de fuente en pantallas pequeñas */
     }
-    .skills .fila .col .barra-skill{
-        width: 100%;
+
+    .proyectos .contenido-seccion .fotos,
+    .proyectos .contenido-seccion .foto2 {
+        max-width: 150px; /* Disminuir tamaño de las imágenes en pantallas pequeñas */
     }
 
 }
 
-
-/*PRUEBA DE CARRUSEL*/
-/*
-.skills{
-    background-color: #1e2326;
-    color: #f0f0f0;
-    padding: 50px 20px;
-}
-
-.skills h3{
-    font-size: 48px;
-    font-family: 'Righteous';
-    text-align: center;
-    padding: 20 px 0;
-}*/
-/*
-.skills .icon-gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* ajusta la cantidad de columnas según sea necesario */
-   /* gap: 20px; /* ajusta el espacio entre los íconos según sea necesario */
-  /*}
   
-  .icon-item {
-    background-color: #252a2e;
-    padding: 20px;
-    text-align: center;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .icon-item i {
-    font-size: 2em;
-    color: #fff; /* ajusta el color según sea necesario */
-  /*}
- /* fin prueba de carrusel*/ 
